@@ -9,13 +9,16 @@ import { useRouter } from "next/navigation";
 const Hero = () => {
   const router = useRouter();
   return (
-    <section className="px-4 py-8">
+    <section className="">
       <motion.div
+      style={{
+        backgroundImage: "url(/images/banner.png)"
+      }}
         variants={staggerContainer as any}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className={`py-6 flex items-center md:flex-row flex-col gap-4`}
+        className={`py-6 px-4 bg-cover bg-center bg-no-repeat h-[80vh] flex items-center md:flex-row flex-col gap-4`}
       >
         <div className="flex flex-col md:w-1/2 w-full">
           <motion.h1
@@ -43,14 +46,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="md:w-1/2 w-full md:mt-0 mt-6">
-          <motion.img
-            variants={textVariant(1.1)}
-            src="/gifs/earth.gif"
-            alt="earth"
-            className="w-full"
-          />
-        </div>
+       
       </motion.div>
     </section>
   );

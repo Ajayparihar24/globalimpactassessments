@@ -60,19 +60,21 @@ const WhoWeServe = () => {
 
 export default WhoWeServe;
 
+
 const Card = ({ title, subTitle }: { title: string; subTitle: string }) => {
   return (
     <>
       <div className="w-full h-[300px] bg-transparent cursor-pointer group perspective">
         <div className="relative shadow-xl text-white bg-gradient-to-l from-violet-600 to-violet-700 p-4 rounded preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
-          <div className="backface-hidden  w-full h-full">
+          
+          <div className="backface-hidden  w-full h-full flex items-center justify-center">
+            <p className="font-semibold text-lg text-center">{title}</p>
+          </div>
+          <div className="absolute inset-0 p-2 flex flex-col my-rotate-y-180 backface-hidden w-full h-full overflow-hidden">
             <h3 className="font-poppins font-medium  whitespace-nowrap">
               {title}
             </h3>
             <p className="text-sm mt-3">{subTitle}</p>
-          </div>
-          <div className="absolute inset-0 flex items-center justify-center my-rotate-y-180 backface-hidden w-full h-full overflow-hidden">
-            <p className="font-semibold text-lg text-center">{title}</p>
           </div>
         </div>
       </div>
