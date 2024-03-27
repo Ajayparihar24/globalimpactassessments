@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Global Impact Assessment",
-  description: "Global Impact Assessment",
+  description: "Starfield Technologies; Go Daddy Website Builder",
 };
 
 export default function RootLayout({
