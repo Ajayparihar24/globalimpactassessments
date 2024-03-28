@@ -10,12 +10,14 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <WhoWeAre />
-      <WhoWeServe />
-      <WhereWeServe />
-      <WhyUs />
-      <Team />
-      <ContractInformation />
+      <div className="md:mt-[480px] mt-[320px] ">
+        <WhoWeAre />
+        <WhoWeServe />
+        <WhereWeServe />
+        <WhyUs />
+        <Team />
+        <ContractInformation />
+      </div>
     </>
   );
 }

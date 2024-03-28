@@ -94,6 +94,8 @@
     @apply scale-x-100;
   }
 
-
+  .bg-gradient-btn {
+    @apply bg-gradient-to-tr from-indigo-500 to-indigo-600 text-white rounded px-4 py-3 font-medium text-center flex items-center justify-center gap-2
+  }
   
 }

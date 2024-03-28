@@ -5,13 +5,14 @@ export const navLinks = [
   },
   {
     name: "Services",
+    link: null,
     subLinks: [
       {
         name: "AOS",
         path: "/services/aos",
       },
       {
-        name: "Aos-Compass",
+        name: "AOS-Compass",
         path: "/services/aos-compass",
       },
       {
