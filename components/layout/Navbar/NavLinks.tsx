@@ -93,6 +93,15 @@ const ServiceDropdownLink = () => {
             <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent" />
             <div className="absolute  left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white dark:bg-neutral-800" />
             <div className=" bg-white dark:bg-neutral-800 p-4 rounded shadow-md grid md:grid-cols-3 grid-cols-2 gap-y-14 gap-3 z-10">
+            <div>
+                <NavLink name="AOS-Compass" path="/services/aos-compass" />
+              </div>
+              <div>
+                <NavLink
+                  name="Outcomes Assessment"
+                  path="/services/outcomes-assessment"
+                />
+              </div>
               <div className="flex flex-col gap-4">
                 <NavLink name="Assessment Operating System" path="/services/aos" />
                 <div className="flex flex-col gap-2">
@@ -138,15 +147,11 @@ const ServiceDropdownLink = () => {
                   </Link>
                 </div>
               </div>
+
               <div>
-                <NavLink name="AOS-Compass" path="/services/aos-compass" />
+                <NavLink name="Public Sector" path="/services/public-sector" />
               </div>
-              <div>
-                <NavLink
-                  name="Outcomes Assessment"
-                  path="/services/outcomes-assessment"
-                />
-              </div>
+             
               <div className="flex flex-col gap-4">
                 <NavLink
                   name="Impact Assessment"
@@ -215,9 +220,7 @@ const ServiceDropdownLink = () => {
                   </Link>
                 </div>
               </div>
-              <div>
-                <NavLink name="Public Sector" path="/services/public-sector" />
-              </div>
+             
             </div>
           </motion.div>
         )}

@@ -43,7 +43,7 @@ const IndustryPage = async ({ params }: { params: { id: string } }) => {
 
       <section className=" py-8">
         <Title title="Our services" />
-        <div className="flex flex-wrap justify-center">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2">
           {services &&
             services?.map((data: Service, i: number) => {
               return (
@@ -51,16 +51,12 @@ const IndustryPage = async ({ params }: { params: { id: string } }) => {
                   key={i}
                   transition={{ duration: 1, delay: i * 0.08 }}
                 >
-                  <div className="relative w-full h-full border border-black">
-                    <Image
-                      src={data.image}
-                      alt={`${data.title}`}
-                      width={300}
-                      height={300}
-                      className="w-full h-full"
-                    />
+                  <div style={{
+                    backgroundImage: `url(${data.image})`
+                  }} className="relative bg-cover bg-no-repeat bg-top w-full h-full border border-black">
+                   
 
-                    <div className="absolute inset-0">
+                    <div className="">
                       <div className="mt-28 p-4">
                         <h3 className="text-xl font-semibold mb-4">
                           {data.title}
@@ -78,7 +74,7 @@ const IndustryPage = async ({ params }: { params: { id: string } }) => {
             })}
         </div>
       </section>
-
+{/* absolute overflow-y-auto sm:inset-0 min-[500px]:top-0 min-[400px]:-top-10 -top-10 */}
       {projects?.length > 0 && (
         <section className=" py-8">
           <Title title="Featured Projects" />
@@ -96,7 +92,7 @@ const IndustryPage = async ({ params }: { params: { id: string } }) => {
                         alt={`project-${i}`}
                         width={300}
                         height={300}
-                        className="rounded-full object-cover w-[300px] h-[300px]"
+                        className="rounded-full object-cover min-[373]:w-[300px] min-[373px]:h-[300px]"
                       />
                     </Link>
                     <h3 className="text-center mt-4 dark:opacity-75">

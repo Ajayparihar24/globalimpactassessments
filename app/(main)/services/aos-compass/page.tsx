@@ -7,25 +7,32 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "AOS Compass",
-}
+};
 
 const AosCompassPage = () => {
   return (
     <AnimationWrapper>
       <section className="py-8">
-        <Image
-          width={400}
-          height={400}
-          src="/images/compass/17.png"
-          alt="compass"
-          loading="lazy"
-          className="w-full object-contain rounded mb-8"
-        />
+        <div
+          style={{
+            backgroundImage: `url("/images/compass/compass.png")`,
+          }}
+          className="w-full mb-8 text-white md:min-h-[80vh] min-h-[60vh] bg-cover bg-center bg-no-repeat rounded flex items-center px-4"
+        >
+          <div className="">
+            <h1 className="md:text-6xl sm:text-5xl text-4xl font-bold">Compass</h1>
+            <p className="lg:w-[40%] md:w-1/2 w-full sm:text-base text-sm mt-4 uppercase">
+              Driven By Cutting-Edge AI And ML, Compass Guides You To The Areas
+              Of Greatest Need And Projects With The Highest Impacts, Ensuring
+              Your Giving And Investment Make A Lasting Difference
+            </p>
+          </div>
+        </div>
 
         <Link
           href="https://calendly.com/hello_global_impact_assessment/outcomes-assessment-inquiry"
           target="_blank"
-          className="relative after:absolute after:-bottom-1 after:left-0 after:content-[''] after:w-full after:dark:bg-white after:bg-black after:h-[2px]"
+          className="relative  after:absolute after:-bottom-1 after:left-0 after:content-[''] after:w-full after:dark:bg-white after:bg-black after:h-[2px]"
         >
           CONNECT WITH AN EXPERT
         </Link>
