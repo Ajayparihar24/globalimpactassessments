@@ -5,7 +5,6 @@ import Footer from "@/components/layout/Footer";
 import Title from "@/components/layout/Title";
 import { sias } from "@/constants";
 import { Project } from "@/types";
-import { convertToSlug } from "@/utils/convertToSlug";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,8 +12,7 @@ import React from "react";
 
 export const metadata: Metadata = {
   title: "SIA",
-}
-
+};
 
 const SIAPage = async () => {
   const projects = await getAllProjects();
@@ -76,20 +74,22 @@ const SIAPage = async () => {
         <div className="grid md:grid-cols-2 grid-cols-1  gap-6 max-w-3xl w-full mx-auto place-items-center">
           {projects &&
             projects?.slice(4, 6).map((project: Project, i: number) => {
-              const path = convertToSlug(project.title);
               return (
                 <AnimationWrapper
                   key={i}
                   transition={{ duration: 1, delay: i * 0.08 }}
                 >
                   <div className="p-2 rounded shadow-lg h-full">
-                    <Link href={`/projects/${path}`}>
+                    <Link
+                      href={`/projects/${project.id}`}
+                      className="block sm:w-[300px] sm:h-[300px] w-[200px] h-[200px] mx-auto"
+                    >
                       <Image
                         src={project.image}
                         alt={`project-${i}`}
                         width={300}
                         height={300}
-                        className="rounded-full h-[300px] w-[300px] object-cover"
+                        className="rounded-full w-full h-full object-cover"
                       />
                     </Link>
                     <h3 className="text-center mt-4 text-sm dark:opacity-75">

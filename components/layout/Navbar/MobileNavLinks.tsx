@@ -276,7 +276,7 @@ const MobileNavLinks = ({ onClose, open }: Props) => {
               Projects
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               onClick={handleClose}
               href="/feeds"
@@ -286,7 +286,7 @@ const MobileNavLinks = ({ onClose, open }: Props) => {
             >
               Feeds
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
               onClick={handleClose}
