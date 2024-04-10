@@ -22,7 +22,7 @@ const WhoWeAre = () => {
             impact of their operations.
           </p>
           
-          <Image src="/images/team.jpg" alt="who we are" width={400} height={400} className=" object-cover rounded-full sm:w-[400px] sm:h-[400px] w-[300px] h-[300px] mx-auto md:mt-0 mt-6" />
+          <Image src="/images/who-we-are.png" alt="who_we_are" width={400} height={400} className=" object-cover rounded sm:w-[400px] sm:h-[400px] w-[300px] h-[300px] mx-auto md:mt-0 mt-6" />
         </div>
     </section>
   );
